@@ -77,7 +77,7 @@ public class ToDoList {
                 "completion int(1)," +
                 "PRIMARY KEY (id)" +
                 ")";
-
+// LIQUID BASE (FUTURE RESEARCH) 
         connection.createStatement().execute(createTableSQL);
     }
 
