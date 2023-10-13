@@ -1,17 +1,18 @@
 package org.example;
 
-class Task {
+public class Task {
     private String description;
     private String priority;
     private String dueDate;
+    private int completed;
 
-    public Task(String description, String priority, String dueDate) {
+    public Task(String description, String priority, String dueDate,int completed) {
         this.description = description;
         this.priority = priority;
         this.dueDate = dueDate;
+        this.completed = completed;
     }
 
-    // Getters for task properties
     public String getDescription() {
         return description;
     }
@@ -22,6 +23,14 @@ class Task {
 
     public String getDueDate() {
         return dueDate;
+    }
+
+    public int isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(int completed) {
+        this.completed = completed;
     }
 
     @Override
