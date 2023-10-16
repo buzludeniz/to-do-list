@@ -14,25 +14,25 @@ public class Main {
 
         while (running) {
             System.out.println("Menu:");
-            System.out.println("1. Add Task");
-            System.out.println("2. View Tasks by Priority");
-            System.out.println("3. View Tasks by Due Date");
-            System.out.println("4. Delete Task");
-            System.out.println("5.Mark as Complete");
-            System.out.println("6. Quit");
+            System.out.println("1. Shto task");
+            System.out.println("2. Shiko renditjen  ne baze te prioritetit");
+            System.out.println("3. Shkio renditjen ne baze te deadline");
+            System.out.println("4. Fshi Taskun");
+            System.out.println("5. Sheno si te perfunduar");
+            System.out.println("6. Dil");
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter description: ");
+                    System.out.print("Shto pershkrimin: ");
                     String description = scanner.nextLine();
 
-                    System.out.print("Enter priority (High/Medium/Low): ");
+                    System.out.print("Vendos nivelin e prioritetit (High/Medium/Low): ");
                     String priority = scanner.nextLine();
 
-                    System.out.print("Enter due date (yyyy-MM-dd): ");
+                    System.out.print("Vendos deadline (yyyy-MM-dd): ");
                     String dueDate = scanner.nextLine();
 
                     Task task = new Task(description, priority, dueDate, 0);
@@ -48,13 +48,13 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.print("Enter the task number to delete: ");
+                    System.out.print("Vendo numrin e taskut qe do te fshish: ");
                     int indexToDelete = scanner.nextInt();
                     toDoList.deleteTask(indexToDelete); // Adjust for 0-based index
                     break;
 
                 case 5:
-                    System.out.println("Enter the task number to mark as complete: ");
+                    System.out.println("Shot numrin e taskut qe do te shenosh si te perfunduar: ");
                     int indexToModify = scanner.nextInt();
                     toDoList.MarkasComplete(indexToModify);
                     break;
@@ -64,7 +64,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Zgjidhje e pamundur.Provo Serish.");
             }
         }
 

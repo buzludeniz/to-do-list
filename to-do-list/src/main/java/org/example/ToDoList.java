@@ -77,7 +77,7 @@ public class ToDoList {
                 "completion int(1)," +
                 "PRIMARY KEY (id)" +
                 ")";
-// LIQUID BASE (FUTURE RESEARCH) 
+// LIQUID BASE (FUTURE RESEARCH)
         connection.createStatement().execute(createTableSQL);
     }
 
@@ -92,9 +92,9 @@ public class ToDoList {
 
             int rowdel = statement.executeUpdate();
             if (rowdel > 0) {
-                System.out.println("TASK IS DELETED");
+                System.out.println("TASK U FSHI");
             } else {
-                System.out.println("TASK NOT FOUND PLS ENTER A VALID TASK ID");
+                System.out.println("Tasku eshte i pagjetshem provo serish");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -107,7 +107,7 @@ public class ToDoList {
         Collections.sort(tasks, comparator);
         for (int i = 0; i < tasks.size(); i++) {
             Task task = tasks.get(i);
-            System.out.println("Task " + (i + 1) + ": " + task + ", Completed: " + task.isCompleted());
+            System.out.println("Task " + (i + 1) + ": " + task + ", I perfunduar: " + task.isCompleted());
         }
     }
 
@@ -120,9 +120,9 @@ public class ToDoList {
             statement.setInt(1, taskid);
             int rowupdated = statement.executeUpdate();
             if (rowupdated > 0) {
-                System.out.println("TASK IS COMPLETED");
+                System.out.println("Tasku eshte shenuar si i perfunduar");
             } else {
-                System.out.println("TASK NOT FOUND PLS ENTER A VALID TASK ID");
+                System.out.println("Tasku eshte i pagjetshem provo serish");
             }
         } catch (SQLException e) {
             e.printStackTrace();
